@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 1</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/main.js" type="text/javascript"></script>
+<!-- 	<script src="http://ece.ubc.ca/~kbajaj/cpen400a/jquery.js" type="text/javascript"></script>
+    <script src="http://ece.ubc.ca/~gpli/CPEN400A/hw2/test.js" type="text/javascript"></script> -->
+</head>
+	
+	
+<body>
+	<div id="topHeader">
+		<button id="topButton" onclick='overlay()'>Cart ($0)</button>
+	</div>
+	
+	<div id="header">
+		<div id="logo"><img src="logo.png"/></div>
+		<div id="welcomeBanner"><img src="welcome.png"/></div>
+	</div>
+	
+	<div id="mainContent">
+		<div id="navigationMenu">
+			<button class="button">All Items</button>
+			<button class="button">Books</button>
+			<button class="button">Clothing</button>
+			<button class="button">Tech</button>
+			<button class="button">Gifts</button>
+			<button class="button">Stationary</button>
+			<button class="button">Supplies</button>
+			<button class="button" onclick="showCart()">Show Cart</button>
+		</div>
+		
+		<div id="productList" >
+			<div class="product">
+				<img src="images/Box1_$10.png"/ >
+				<img class="cartImg" src="images/cart.png"/ >
+				<button class="addButton" onclick="addToCart('Box1')">Add</button>
+				<button class="removeButton" onclick="removeFromCart('Box1')">Remove</button>
+				<p class="price">$10</p>
+				<p>Box1</p>
+			</div>
+			
+			<div class="product">
+				<img src="images/Box2_$5.png"/>
+				<img class="cartImg" src="images/cart.png"/>
+				<button class="addButton" onclick="addToCart('Box2')" >Add</button>
+				<button class="removeButton" onclick="removeFromCart('Box2')" >Remove</button>
+				<p class="price">$5</p>
+				<p>Box2</p>
+			</div>
+			
+			<div class="product">
+				<img src="images/Clothes1_$20.png"/>
+				<img class="cartImg" src="images/cart.png"/>
+				<button class="addButton" onclick="addToCart('Clothes1')" >Add</button>
+				<button class="removeButton" onclick="removeFromCart('Clothes1')" >Remove</button>				
+				<p class="price">$20</p>
+				<p>Clothes1</p>
+			</div>
+			
+			<div class="product">
+				<img src="images/Clothes2_$30.png"/>
+				<img class="cartImg" src="images/cart.png"/>
+				<button class="addButton" onclick="addToCart('Clothes2')" >Add</button>
+				<button class="removeButton" onclick="removeFromCart('Clothes2')" >Remove</button>				
+				<p class="price">$30</p>
+				<p>Clothes2</p>
+			</div>
+			
+			<div class="product">
+				<img src="images/Jeans_$50.png"/>
+				<img class="cartImg" src="images/cart.png"/>
+				<button class="addButton" onclick="addToCart('Jeans')" >Add</button>
+				<button class="removeButton" onclick="removeFromCart('Jeans')" >Remove</button>
+				<p class="price">$50</p>
+				<p>Jeans</p>
+			</div>
+
+			<div class="product">
+				<img src="images/Keyboard_$20.png"/>
+				<img class="cartImg" src="images/cart.png"/>
+				<button class="addButton" onclick="addToCart('Keyboard')" >Add</button>
+				<button class="removeButton" onclick="removeFromCart('Keyboard')" >Remove</button>
+				<p class="price">$20</p>
+				<p>Keyboard</p>
+			</div>		
+
+			<div class="product">
+				<img src="images/KeyboardCombo_$40.png"/>
+				<img class="cartImg" src="images/cart.png"/>
+				<button class="addButton" onclick="addToCart('KeyboardCombo')" >Add</button>
+				<button class="removeButton" onclick="removeFromCart('KeyboardCombo')" >Remove</button>
+				<p class="price">$40</p>
+				<p>KeyboardCombo</p>
+			</div>		
+
+			<div class="product">
+				<img src="images/Mice_$20.png"/>
+				<img class="cartImg" src="images/cart.png"/>
+				<button class="addButton" onclick="addToCart('Mice')" >Add</button>
+				<button class="removeButton" onclick="removeFromCart('Mice')" >Remove</button>
+				<p class="price">$20</p>
+				<p>Mice</p>
+			</div>	
+
+			<div class="product">
+				<img src="images/PC1_$350.png"/>
+				<img class="cartImg" src="images/cart.png"/>
+				<button class="addButton" onclick="addToCart('PC1')" >Add</button>
+				<button class="removeButton" onclick="removeFromCart('PC1')" >Remove</button>
+				<p class="price">$350</p>
+				<p>PC1</p>
+			</div>	
+
+			<div class="product">
+				<img src="images/PC2_$400.png"/>
+				<img class="cartImg" src="images/cart.png"/>
+				<button class="addButton"  onclick="addToCart('PC2')" >Add</button>
+				<button class="removeButton" onclick="removeFromCart('PC2')" >Remove</button>
+				<p class="price">$400</p>
+				<p>PC2</p>
+			</div>		
+
+			<div class="product">
+				<img src="images/PC3_$300.png"/>
+				<img class="cartImg" src="images/cart.png"/>
+				<button class="addButton" onclick="addToCart('PC3')" >Add</button>
+				<button class="removeButton" onclick="removeFromCart('PC3')" >Remove</button>
+				<p class="price">$300</p>
+				<p>PC3</p>
+			</div>		
+
+			<div class="product">
+				<img src="images/Tent_$100.png"/>
+				<img class="cartImg" src="images/cart.png"/>
+				<button class="addButton"  onclick="addToCart('Tent')" >Add</button>
+				<button class="removeButton" onclick="removeFromCart('Tent')" >Remove</button>
+				<p class="price">$100</p>
+				<p>Tent</p>
+			</div>				
+			
+		</div>
+		
+		<div id="footer">Contact information within the footer</div>
+		
+	</div>
+	
+	<script>
+		var lop = document.getElementsByClassName('product');	
+		//console.log("lop[0]: " + lop[0]);
+		for	(var i=0; i<lop.length;	i++){	
+			lop[i].addEventListener('mouseover', function (event) {
+				console.log('Hi!');
+				showOrHideRemoveButtoon(this);
+			});
+		}	
+		console.log(lop);
+	</script>
+	
+	<div id="overlay">
+		<div class="modal">
+			<!-- <input type="image" src="submit.gif" alt="Submit" width="600px" height="600px"> -->
+			<a href='#' class="boxclose" onclick='overlay()'></a>
+			<table id="modalTable" style="width:100%;font-size:100px" >
+				<tr> <td>Product</td> <td>Quantity</td> <td>Total Price</td> <td>Add</td> <td>Remove</td></tr>
+			</table>
+			<button style="width:100%; height:100px; font-size:100px" >Checkout</button>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+<!-- function showOrHideRemoveButtoon(x){
+	console.log( "mouse move here..." );
+	console.log(x);
+} -->
